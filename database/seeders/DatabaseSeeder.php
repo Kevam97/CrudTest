@@ -14,8 +14,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $this->call(
+        $this->call([
+            CountriesSeeder::class,
             PermissionSeeder::class
+            ]
         );
 
         \App\Models\User::factory()->create([
