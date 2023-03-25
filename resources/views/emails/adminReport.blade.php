@@ -3,7 +3,7 @@
 
 Se ha inscrito un nuevo usuario
 
-<x-mail::button :url="'http://localhost/report'">
+<x-mail::button :url="env('APP_URL') . '/report' ">
 Ver reporte
 </x-mail::button>
 

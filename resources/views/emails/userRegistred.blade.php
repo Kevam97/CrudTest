@@ -4,7 +4,7 @@
 Usuario {{ $user->name.' '.$user->lastname }} has sido registrado en nuesta platafroma {{ config('app.name') }}.
 Ya puede ingresar con su correo {{ $user->email }}
 
-<x-mail::button :url="'http://localhost/login'">
+<x-mail::button :url="env('APP_URL') . '/login' ">
 IR A LA PAGINA
 </x-mail::button>
 
