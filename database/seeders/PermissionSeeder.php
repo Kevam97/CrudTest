@@ -35,6 +35,7 @@ class PermissionSeeder extends Seeder
         $supplier = Role::create([
             'name' =>'supplier',
             'guard_name' =>'web']);
+
         $intern = Role::create([
             'name' =>'intern',
             'guard_name' =>'web']);
