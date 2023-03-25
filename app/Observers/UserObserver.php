@@ -2,6 +2,7 @@
 
 namespace App\Observers;
 
+use App\Mail\AdminReport;
 use App\Mail\UserResgistred;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
@@ -13,8 +14,10 @@ class UserObserver
      */
     public function created(User $user): void
     {
+        // $admin = User::role('itern')->first();
 
         Mail::to($user->email)->send(new UserResgistred($user));
+        Mail::to('test@example.com')->send(new AdminReport());
     }
 
     // /**
