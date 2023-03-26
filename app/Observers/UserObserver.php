@@ -14,10 +14,10 @@ class UserObserver
      */
     public function created(User $user): void
     {
-        // $admin = User::role('itern')->first();
+        $admin = User::role('admin')->first();
 
         Mail::to($user->email)->send(new UserResgistred($user));
-        Mail::to('test@example.com')->send(new AdminReport());
+        Mail::to($admin->email)->send(new AdminReport());
     }
 
     // /**
