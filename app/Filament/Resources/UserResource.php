@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
+use App\Filament\Resources\UserResource\Widgets\UsersStatsOverview;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Components\Card;
@@ -79,6 +80,13 @@ class UserResource extends Resource
     {
         return [
             //
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            UsersStatsOverview::class
         ];
     }
 
