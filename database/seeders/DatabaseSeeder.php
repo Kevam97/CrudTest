@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
@@ -30,6 +31,11 @@ class DatabaseSeeder extends Seeder
             'name' =>'admin',
             'guard_name' =>'web']);
 
+        $adminView = Permission::create([
+            'name' =>'admin_view',
+            'guard_name' =>'web']);
+
+        $admin->givePermissionTo($adminView);
         $user->assignRole($admin);
     }
 }

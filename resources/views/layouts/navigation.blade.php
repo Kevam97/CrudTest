@@ -12,9 +12,25 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @can('client_view')
+                        <x-nav-link :href="route('client')" :active="request()->routeIs('client')">
+                            {{ __('Client') }}
+                        </x-nav-link>
+                    @endcan
+                    @can('supplier_view')
+                        <x-nav-link :href="route('supplier')" :active="request()->routeIs('supplier')">
+                            {{ __('Supplier') }}
+                        </x-nav-link>
+                    @endcan
+                    @can('intern_view')
+                        <x-nav-link :href="route('intern')" :active="request()->routeIs('intern')">
+                            {{ __('Intern') }}
+                        </x-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -70,6 +86,23 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @can('client_view')
+                <x-responsive-nav-link :href="route('client')" :active="request()->routeIs('client')">
+                    {{ __('Client') }}
+                </x-responsive-nav-link>
+            @endcan
+            @can('supplier_view')
+
+                <x-responsive-nav-link :href="route('supplier')" :active="request()->routeIs('supplier')">
+                    {{ __('Supplier') }}
+                </x-responsive-nav-link>
+            @endcan
+            @can('intern_view')
+
+                <x-responsive-nav-link :href="route('intern')" :active="request()->routeIs('intern')">
+                    {{ __('Intern') }}
+                </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->

@@ -14,17 +14,17 @@ class PermissionSeeder extends Seeder
      */
     public function run(): void
     {
-        $clientCreate = Permission::create([
-            'name' => 'client_create',
+        $clientView = Permission::create([
+            'name' => 'client_view',
             'guard_name'=> 'web',
         ]);
-        $supplierCreate  = Permission::create([
-            'name' => 'supplier_create',
+        $supplierView  = Permission::create([
+            'name' => 'supplier_view',
             'guard_name'=> 'web',
         ]);
 
-        $internCreate  = Permission::create([
-            'name' => 'intern_create',
+        $internView  = Permission::create([
+            'name' => 'intern_view',
             'guard_name'=> 'web',
         ]);
 
@@ -40,8 +40,8 @@ class PermissionSeeder extends Seeder
             'name' =>'intern',
             'guard_name' =>'web']);
 
-        $client->givePermissionTo($clientCreate);
-        $supplier->givePermissionTo($supplierCreate);
-        $intern->givePermissionTo($internCreate);
+        $client->givePermissionTo($clientView);
+        $supplier->givePermissionTo($supplierView);
+        $intern->givePermissionTo($internView);
     }
 }

@@ -10,6 +10,7 @@ Se presenta el siguiente desarrollo de un CRUD elaborado con laravel
   * [Laravel sail](https://laravel.com/docs/10.x/sail)
   * [Laravel breeze](https://laravel.com/docs/10.x/starter-kits#laravel-breeze)
   * [Spatie](https://spatie.be/docs/laravel-permission/v5/installation-laravel)
+  * [Livewire](https://laravel-livewire.com/)
   * [Filament](https://filamentphp.com/docs/2.x/admin/installation)
   * [MySQL](https://www.mysql.com)
   * [TailWindCSS](https://tailwindcss.com)
